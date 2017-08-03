@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validaForm() {
+    var x = document.forms["meuForm"]["nome"].value;
+    if (x == "") {
+        alert("O nome precisa ser preenchido");
+        return false;
+    }
+     var s = document.forms["meuForm"]["senha"].value;
+      var rs = document.forms["meuForm"]["Confirmar"].value;
+     if (s != rs) {
+        alert("As senhas sao diferentes");
+        return false;
+    }
+
+}
+</script>
+</head>
+<body>
+
+<form name="meuForm" action="#"
+onsubmit="return validaForm()" method="post">
+Name: <input type="text" name="nome">
+Senha: <input type="text" name="senha">
+Confirmar Senha: <input type="text" name="Confirmar">
+<input type="submit" value="Enviar">
+</form>
+</body>
+</html>

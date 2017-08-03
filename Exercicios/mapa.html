@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Marcadores Simples</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: -23.588,lng: -46.666};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+        });
+        var marker1 = new google.maps.Marker({
+          position: {lat: -23.594,lng: -46.683},
+          map: map,
+          icon: "https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Flag--Right-Pink.png"
+        });
+        var marker2 = new google.maps.Marker({
+          position: {lat: -23.598,lng: -46.687},
+          map: map,
+          icon: "https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/256/Map-Marker-Flag--Right-Pink.png"
+        });
+        var marker3 = new google.maps.Marker({
+          position: {lat: -23.661,lng: -46.535},
+          map: map,
+          icon: "/Users/RicoSimon/Documents/GoPro Projects/location_map_pin_home_green.png"
+        });
+       
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAB9URdY_Iy6G0kZtvdH1UX7eNUQ60t8k&callback=initMap">
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
